@@ -10,6 +10,10 @@ get '/' do
   erb(:index)
 end
 # show
+get '/:id' do
+  @student = Student.find(params[:id])
+  erb(:show)
+end
 
 # new
 

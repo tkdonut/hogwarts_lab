@@ -1,22 +1,25 @@
-<form action='/' method='post'>
-
-  <label for="first_name"> First Name: </label>
-  <input type="text" name="first_name" id="first_name">
-<br>
-  <label for="last_name"> Last Name: </label>
-  <input type="text" name="last_name" id="last_name">
-<br>
-  <label for="age"> Age: </label>
-  <input type="text" name="age" id="age">
-<br>
-  <label for="house_select">Select House:</label>
-  <select name="house_id" id="house_select">
-    <option value="1">Gryffindor</option>
-    <option value="2">Hufflepuff</option>
-    <option value="3">Ravenclaw</option>
-    <option value="4">Slytherin</option>
-  </select>
-<br>
-<input type="submit" value="Put on the Sorting Hat">
-
-</form>
+<div class= studentform width = '400px'>
+  <h2>Enrolment Contract</h2>
+  <form action='/students' method='post'>
+      <p>
+        <label for="first_name"> First Name: </label>
+        <input type="text" name="first_name" id="first_name">
+      </p><p>    
+        <label for="last_name"> Last Name: </label>
+        <input type="text" name="last_name" id="last_name">
+      </p><p>    
+        <label for="age"> Age: </label>
+        <input type="number" max='150' min='0' name="age" id="age">
+      </p><p>    
+        <label for="house_select">Select House:</label>
+        <select name="house_id" id="house_select">
+        <% @houses.each do |house| %>
+        <option value="<%=house.id%>"><%=house.name.capitalize%></option>
+        <% end %>
+        </select>
+      </p><p>
+        <label></label>
+        <input type="submit" value="Enrol">
+      </p>
+    </form>
+</div>

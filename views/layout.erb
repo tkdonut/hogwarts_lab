@@ -6,12 +6,15 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <nav id="menu">
-    <li class="menu-item"><a href='/students'>Students</a></li>
-    <li class="menu-item"><a href='/students/new'>Enrol Student</a></li>
-  </nav>
-  <h1 id="logo">Harry Potter & The Houses</h1>
-  <%= yield %>
-
+  <div class = 'flex-container'>
+    <div class = 'box-1'>
+      <nav id="menu">
+        <li class="menu-item"><a href='/students'>Students</a></li>
+        <li class="menu-item"><a href='/students/new'>Enrol Student</a></li>
+      </nav>
+      <img src='/crest.png' id='crest'>
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

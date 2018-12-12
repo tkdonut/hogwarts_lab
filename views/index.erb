@@ -1,4 +1,6 @@
+<h2> Currently Enrolled Students </h2>
+
 <% @students.each do |student| %>
-  <p>Name: <%= student.format_name%></p>
+  <a href = 'students/<%=student.id %>'><%= student.format_name%></a>
 
 <% end %>

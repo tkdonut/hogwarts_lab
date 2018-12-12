@@ -1,8 +1,10 @@
 body {
-  padding: 30px;
   font-family: 'Rye', cursive;
   color: #ccad00;
-  background-image: url("/harry_potter.gif");
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("/background.jpg");
 }
 
 a {
@@ -29,29 +31,34 @@ a:hover {
   text-align: center;
 }
 
-#student-wrapper {
-  margin-left: 300px;
-}
-.student {
-  border: 5px double;
-  margin: 0 35px 30px 0;  
-  padding: 25px;
-  width: 200px;
-  display: inline-block;
+
+.flex-container {
+height:100vh;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+display: flex;
 }
 
-.form-el {
-  margin: 10px 0;
+.box-1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px black;
 }
 
-.form-wrapper .form-el input[type="submit" i] {
-  margin-left: 180px;
+#crest {
+padding-top: 30px;
+width: 150px;
 }
 
-.form-wrapper .form-el label {
-  text-align: right;
-  display: inline-block;
-  vertical-align: middle;
-  width: 160px;
-  margin: 0 1em 0 0;
-}
+form  { display: table; text-align: center;     }
+p     { display: table-row;  }
+label { display: table-cell; padding:10px} 
+select { display: table-cell;} 
+input { display: table-cell; text-align: center;}
+
+h2 {text-align: center;}
